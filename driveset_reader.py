@@ -53,7 +53,17 @@ timeWindow = 30
 # ============================================
 
 def validate_fps(fps_value):
-    """验证 fps 参数"""
+    """验证 fps 参数
+    
+    Args:
+        fps_value (int): 帧率值
+        
+    Returns:
+        bool: 如果验证通过返回 True
+        
+    Raises:
+        ValueError: 如果 fps 值无效
+    """
     if fps_value <= 0:
         raise ValueError(f"Invalid fps value: {fps_value}. FPS must be positive.")
     if fps_value > 120:
