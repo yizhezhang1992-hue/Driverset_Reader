@@ -6,7 +6,7 @@ import threading
 from datetime import datetime
 import imageio   #video reading and displaying
 
-
+# Version 1.0: basic video and data loading, video displaying, and one figure with selectable column to plot
 """
 from matplotlib.backends import qt4_compat
 use_pyside = qt4_compat.QT_API == qt4_compat.QT_API_PYSIDE
