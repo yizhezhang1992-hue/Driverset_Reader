@@ -77,7 +77,10 @@ def validate_video_dimensions(width, height):
     return True
 
 def validate_data_integrity(data_folder):
-    """验证数据完整性"""
+    """验证数据完整性
+    
+    确保数据文件夹存在并包含必要的文件。
+    """
     if not os.path.exists(data_folder):
         raise ValueError(f"Data folder not found: {data_folder}")
     return True
