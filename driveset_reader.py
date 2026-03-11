@@ -33,6 +33,20 @@ from matplotlib.figure import Figure
 import matplotlib.ticker as plticker
 #import matplotlib.animation as animation
 
+# ============================================
+# Matplotlib Configuration Optimization
+# ============================================
+import matplotlib
+matplotlib.use('Qt5Agg')  # 使用 Qt5 后端以获得更好的性能
+matplotlib.rcParams['figure.dpi'] = 100
+matplotlib.rcParams['savefig.dpi'] = 150
+matplotlib.rcParams['font.size'] = 10
+matplotlib.rcParams['axes.labelsize'] = 10
+matplotlib.rcParams['axes.titlesize'] = 12
+matplotlib.rcParams['xtick.labelsize'] = 8
+matplotlib.rcParams['ytick.labelsize'] = 8
+matplotlib.rcParams['legend.fontsize'] = 8
+
 
 fps = -1
 videowidthShow = 1024
