@@ -59,6 +59,15 @@ dataFolderName = './Invalid_folder'
 videoCorrect = False
 dataCorrect = False
 
+# ============================================
+# Helper Functions for Rendering (Added by Alice)
+# ============================================
+
+def optimize_figure_display(figure):
+    """优化图形显示性能"""
+    figure.set_tight_layout(True)
+    return figure
+
 currentSecond = 0.1
 timeWindow = 30
 
