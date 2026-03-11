@@ -48,6 +48,30 @@ dataCorrect = False
 currentSecond = 0.1
 timeWindow = 30
 
+# ============================================
+# Data Validation Functions (Added by user)
+# ============================================
+
+def validate_fps(fps_value):
+    """验证 fps 参数"""
+    if fps_value <= 0:
+        raise ValueError(f"Invalid fps value: {fps_value}. FPS must be positive.")
+    if fps_value > 120:
+        raise ValueError(f"Invalid fps value: {fps_value}. FPS should not exceed 120.")
+    return True
+
+def validate_video_dimensions(width, height):
+    """验证视频尺寸"""
+    if width <= 0 or height <= 0:
+        raise ValueError(f"Invalid dimensions: {width}x{height}. Dimensions must be positive.")
+    return True
+
+def validate_data_integrity(data_folder):
+    """验证数据完整性"""
+    if not os.path.exists(data_folder):
+        raise ValueError(f"Data folder not found: {data_folder}")
+    return True
+
 class figureToPlot(QtWidgets.QVBoxLayout):
 
    def __init__(self,parent=None):
